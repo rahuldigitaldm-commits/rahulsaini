@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Saini | Digital Marketing & Video Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #FF6B35;
+            --secondary: #004E89;
+            --accent: #00A896;
+            --dark: #1A1A2E;
+            --light: #F8F9FA;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--primary);
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 120px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(0, 78, 137, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border: 5px solid white;
+        }
+        
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: var(--primary);
+        }
+        
+        .hero h2 {
+            font-size: 24px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 600px;
+        }
+        
+        .tagline {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            color: var(--secondary);
+        }
+        
+        /* Specialization Section */
+        .specialization {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-title h2 {
+            font-size: 42px;
+            color: var(--dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 5px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+        
+        .section-title p {
+            color: #777;
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 18px;
+        }
+        
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .spec-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s;
+            border-top: 5px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .spec-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .spec-card:nth-child(2) {
+            border-top-color: var(--secondary);
+        }
+        
+        .spec-card:nth-child(3) {
+            border-top-color: var(--accent);
+        }
+        
+        .spec-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 107, 53, 0.2) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        
+        .spec-card:nth-child(2) .spec-icon {
+            background: linear-gradient(135deg, rgba(0, 78, 137, 0.1) 0%, rgba(0, 78, 137, 0.2) 100%);
+        }
+        
+        .spec-card:nth-child(3) .spec-icon {
+            background: linear-gradient(135deg, rgba(0, 168, 150, 0.1) 0%, rgba(0, 168, 150, 0.2) 100%);
+        }
+        
+        .spec-icon i {
+            font-size: 36px;
+            color: var(--primary);
+        }
+        
+        .spec-card:nth-child(2) .spec-icon i {
+            color: var(--secondary);
+        }
+        
+        .spec-card:nth-child(3) .spec-icon i {
+            color: var(--accent);
+        }
+        
+        .spec-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .spec-card ul {
+            list-style: none;
+        }
+        
+        .spec-card ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .spec-card ul li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Expertise Section */
+        .expertise {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(0, 78, 137, 0.05) 0%, rgba(0, 168, 150, 0.05) 100%);
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .expertise-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .expertise-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .expertise-item i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .expertise-item h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        /* Projects Section */
+        .projects {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s;
+            position: relative;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .project-img {
+            height: 220px;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-img:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 100%);
+        }
+        
+        .project-img i {
+            font-size: 60px;
+            z-index: 1;
+        }
+        
+        .project-info {
+            padding: 30px;
+        }
+        
+        .project-info h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .project-tag {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        /* Video Section */
+        .video-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(0, 78, 137, 0.05) 100%);
+        }
+        
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .video-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+        
+        .video-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        .video-placeholder {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .video-placeholder i {
+            font-size: 60px;
+        }
+        
+        .video-content {
+            padding: 25px;
+        }
+        
+        .video-content h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .video-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            color: #777;
+            font-size: 14px;
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+        
+        .stat-item h3 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .stat-item p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 107, 53, 0.2) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .info-icon i {
+            color: var(--primary);
+            font-size: 24px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .footer-logo span {
+            color: var(--primary);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 18px;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 15px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content,
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .hero-text,
+            .hero-image,
+            .contact-info,
+            .contact-form {
+                width: 100%;
+                padding-right: 0;
+            }
+            
+            .hero-text {
+                margin-bottom: 60px;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+                text-align: center;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 12px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero h2 {
+                font-size: 20px;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">RAHUL<span>SAINI</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#specialization">Specialization</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#video">Roasting Videos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="tagline">Digital Marketing Expert & Video Creator</div>
+                    <h1>Rahul <span>Saini</span></h1>
+                    <h2>Google Ads • Meta Ads • Social Media Management • Video Roasting</h2>
+                    <p>I help brands grow exponentially through data-driven paid advertising campaigns on Google & Meta platforms, while creating engaging roasting video content for YouTube and Instagram that drives viral engagement and builds loyal communities.</p>
+                    <div>
+                        <a href="#projects" class="btn">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div style="background: linear-gradient(45deg, var(--primary), var(--secondary)); height: 450px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; position: relative;">
+                        <div style="text-align: center; z-index: 2; padding: 20px;">
+                            <i class="fas fa-chart-line" style="font-size: 100px; margin-bottom: 20px; opacity: 0.9;"></i>
+                            <h3 style="font-size: 28px; margin-bottom: 10px;">Data-Driven Results</h3>
+                            <p style="font-size: 18px;">+ Creative Video Content</p>
+                        </div>
+                        <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 30px; font-size: 16px;">
+                            <i class="fab fa-youtube" style="margin-right: 8px;"></i> 50K+ Subscribers
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialization Section -->
+    <section id="specialization" class="specialization">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Specialization</h2>
+                <p>Combining data-driven advertising expertise with creative content creation for maximum impact</p>
+            </div>
+            <div class="spec-grid">
+                <div class="spec-card">
+                    <div class="spec-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Paid Advertising</h3>
+                    <p>Expert in creating and managing high-converting campaigns across platforms:</p>
+                    <ul>
+                        <li>Google Ads (Search, Display, YouTube)</li>
+                        <li>Meta Ads (Facebook & Instagram)</li>
+                        <li>Conversion Tracking & Analytics</li>
+                        <li>ROI Optimization & A/B Testing</li>
+                        <li>Retargeting & Lookalike Audiences</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Social Media Management</h3>
+                    <p>Full-spectrum management of social media platforms for brand growth:</p>
+                    <ul>
+                        <li>YouTube Channel Management</li>
+                        <li>Facebook Page Optimization</li>
+                        <li>Instagram Content Strategy</li>
+                        <li>Community Engagement</li>
+                        <li>Content Calendar Planning</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Content Creation</h3>
+                    <p>Specialized in creating engaging roasting video content that drives engagement:</p>
+                    <ul>
+                        <li>Roasting Video Production</li>
+                        <li>Scriptwriting & Storyboarding</li>
+                        <li>Editing & Post-Production</li>
+                        <li>Thumbnail Design & SEO</li>
+                        <li>Audience Growth Strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="expertise">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Expertise</h2>
+                <p>Tools and platforms I'm proficient in for delivering exceptional results</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <i class="fab fa-google"></i>
+                    <h4>Google Ads</h4>
+                    <p>Search, Display, Shopping, YouTube Ads</p>
+                </div>
+                <div class="expertise-item">
+                    <i class="fab fa-facebook"></i>
+                    <h4>Meta Business Suite</h4>
+                    <p>Facebook & Instagram Ads Manager</p>
+                </div>
+                <div class="expertise-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <h4>Analytics & Tracking</h4>
+                    <p>Google Analytics, GTM, Pixel Tracking</p>
+                </div>
+                <div class="expertise-item">
+                    <i class="fab fa-youtube"></i>
+                    <h4>YouTube Studio</h4>
+                    <p>Channel Management & Analytics</p>
+                </div>
+                <div class="expertise-item">
+                    <i class="fas fa-edit"></i>
+                    <h4>Video Editing</h4>
+                    <p>Premiere Pro, DaVinci Resolve, CapCut</p>
+                </div>
+                <div class="expertise-item">
+                    <i class="fas fa-hashtag"></i>
+                    <h4>Social Media Tools</h4>
+                    <p>Buffer, Hootsuite, Canva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recent Projects</h2>
+                <p>Successful campaigns and projects I've executed for clients</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img" style="background: linear-gradient(45deg, #4285F4, #34A853);">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-commerce Google Ads Campaign</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Google Shopping</span>
+                            <span class="project-tag">Remarketing</span>
+                            <span class="project-tag">Conversion Tracking</span>
+                        </div>
+                        <p>Increased ROAS by 320% for an online fashion store through optimized Google Shopping campaigns and strategic remarketing.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background: linear-gradient(45deg, #1877F2, #E4405F);">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Meta Lead Generation Funnel</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Facebook Ads</span>
+                            <span class="project-tag">Lead Forms</span>
+                            <span class="project-tag">Instagram Stories</span>
+                        </div>
+                        <p>Reduced cost per lead by 45% for an ed-tech startup through targeted Facebook/Instagram campaigns and optimized funnel.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background: linear-gradient(45deg, #FF0000, #FF6B35);">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>YouTube Brand Channel Management</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Content Strategy</span>
+                            <span class="project-tag">SEO Optimization</span>
+                            <span class="project-tag">Community Building</span>
+                        </div>
+                        <p>Grew a tech review channel from 10K to 100K subscribers in 8 months through consistent content and audience engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Roasting Video Content</h2>
+                <p>Engaging roasting videos that entertain while building loyal communities</p>
+            </div>
+            <div class="video-container">
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="video-content">
+                        <h4>Tech Product Roasts</h4>
+                        <p>Humorous yet insightful roasting of overhyped tech products that gained 500K+ views across platforms.</p>
+                        <div class="video-stats">
+                            <span><i class="fas fa-eye"></i> 250K+ views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 15K likes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="video-content">
+                        <h4>Movie & Web Series Roasts</h4>
+                        <p>Entertaining takes on popular movies and web series that generated high engagement and shares.</p>
+                        <div class="video-stats">
+                            <span><i class="fas fa-eye"></i> 180K+ views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 12K likes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="video-content">
+                        <h4>Brand & Advertisement Roasts</h4>
+                        <p>Critiquing brand campaigns and advertisements with humor that resonated with young audiences.</p>
+                        <div class="video-stats">
+                            <span><i class="fas fa-eye"></i> 320K+ views</span>
+                            <span><i class="fas fa-thumbs-up"></i> 18K likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>150%</h3>
+                    <p>Average ROI Increase</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Successful Campaigns</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500K+</h3>
+                    <p>Video Views</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Let's Work Together</h2>
+                <p>Ready to take your digital presence to the next level? Get in touch!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Whether you need help with paid advertising, social media management, or want to collaborate on video content, I'd love to hear from you.</p>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>rahulsaini.digital@example.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Delhi NCR, India</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
